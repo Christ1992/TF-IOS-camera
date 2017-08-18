@@ -45,3 +45,7 @@ coverage/
 /.bundle
 
 *.pb
+*.a
+*.framework
+
+Pods/*
