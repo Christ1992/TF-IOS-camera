@@ -20,6 +20,7 @@
 		1CDB2D4C1ED3A9CD007929E9 /* tensorflow_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CDB2D481ED3A9CD007929E9 /* tensorflow_utils.mm */; };
 		1CDB2D4E1ED3AA35007929E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CDB2D4D1ED3AA35007929E9 /* Info.plist */; };
 		54DC6C3C5F734F3A58069F0C /* libPods-tf_camera_example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA8BF92C84895BFE59D8236 /* libPods-tf_camera_example.a */; };
+		AF7A2C4E1F47A1C300FB2D77 /* TestViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF7A2C4D1F47A1C300FB2D77 /* TestViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		59A3CFF51CF4E68100C4259F /* grace_hopper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grace_hopper.jpg; sourceTree = "<group>"; };
 		59A3CFF71CF4E68100C4259F /* imagenet_comp_graph_label_strings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = imagenet_comp_graph_label_strings.txt; sourceTree = "<group>"; };
 		59A3CFF91CF4E68100C4259F /* tensorflow_inception_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = tensorflow_inception_graph.pb; sourceTree = "<group>"; };
+		AF7A2C4D1F47A1C300FB2D77 /* TestViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				1CDB2D441ED3A9CD007929E9 /* CameraExampleViewController.h */,
 				1CDB2D451ED3A9CD007929E9 /* CameraExampleViewController.mm */,
 				1CDB2D471ED3A9CD007929E9 /* tensorflow_utils.h */,
+				AF7A2C4D1F47A1C300FB2D77 /* TestViewController.mm */,
 				1CDB2D481ED3A9CD007929E9 /* tensorflow_utils.mm */,
 				59A3CFF31CF4E68100C4259F /* data */,
 				5911579C1CF4011C00C31E3A /* Products */,
@@ -256,6 +259,7 @@
 				1C3C9DCB1ED3AB4200B8B5FA /* ios_image_load.mm in Sources */,
 				1CDB2D4A1ED3A9CD007929E9 /* CameraExampleViewController.mm in Sources */,
 				1CDB2D491ED3A9CD007929E9 /* CameraExampleAppDelegate.m in Sources */,
+				AF7A2C4E1F47A1C300FB2D77 /* TestViewController.mm in Sources */,
 				1C3C9DCC1ED3AB4200B8B5FA /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
