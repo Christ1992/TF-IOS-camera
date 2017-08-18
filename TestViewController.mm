@@ -24,7 +24,7 @@
 
 // If you have your own model, modify this to the file name, and make sure
 // you've added the file to your app resources too.
-static NSString* model_file_name = @"tensorflow_inception_graph";
+static NSString* model_file_name = @"eight_calculaiton_graph";
 static NSString* model_file_type = @"pb";
 // This controls whether we'll be loading a plain GraphDef proto, or a
 // file created by the convert_graphdef_memmapped_format utility that wraps a
@@ -32,16 +32,25 @@ static NSString* model_file_type = @"pb";
 // reduce overall memory usage.
 const bool model_uses_memory_mapping = false;
 // If you have your own model, point this to the labels file.
-static NSString* labels_file_name = @"imagenet_comp_graph_label_strings";
+static NSString* labels_file_name = @"kid_new_label_map";
 static NSString* labels_file_type = @"txt";
 // These dimensions need to match those the model was trained with.
-const int wanted_input_width = 224;
-const int wanted_input_height = 224;
+const int wanted_input_width = 300;
+const int wanted_input_height = 300;
 const int wanted_input_channels = 3;
-const float input_mean = 117.0f;
-const float input_std = 1.0f;
-const std::string input_layer_name = "input";
-const std::string output_layer_name = "softmax1";
+//const float input_mean = 117.0f;
+//const float input_std = 1.0f;
+const std::string input_layer_name = "image_tensor:0";
+
+
+
+//const std::string output_layer_name = "softmax1";
+//change to array cause 4 output
+const NSArray *names  = @[
+                    @"detection_boxes:0",
+                    @"detection_scores:0",
+                    @"detection_classes:0",
+                    @"num_detections:0"];
 
 static void *AVCaptureStillImageIsCapturingStillImageContext =
     &AVCaptureStillImageIsCapturingStillImageContext;
@@ -131,7 +140,7 @@ static void *AVCaptureStillImageIsCapturingStillImageContext =
   if (context == AVCaptureStillImageIsCapturingStillImageContext) {
     BOOL isCapturingStillImage =
         [[change objectForKey:NSKeyValueChangeNewKey] boolValue];
-
+        NSLog(@"change:%d", isCapturingStillImage);
     if (isCapturingStillImage) {
       // do flash bulb like animation
       flashView = [[UIView alloc] initWithFrame:[previewView frame]];
@@ -156,15 +165,26 @@ static void *AVCaptureStillImageIsCapturingStillImageContext =
   }
 }
 
+//- (AVCaptureVideoOrientation)avOrientationForDeviceOrientation:
+//    (UIDeviceOrientation)deviceOrientation {
+//  AVCaptureVideoOrientation result =
+//      (AVCaptureVideoOrientation)(deviceOrientation);
+//  if (deviceOrientation == UIDeviceOrientationLandscapeLeft)
+//    result = AVCaptureVideoOrientationLandscapeRight;
+//  else if (deviceOrientation == UIDeviceOrientationLandscapeRight)
+//    result = AVCaptureVideoOrientationLandscapeLeft;
+//  return result;
+//}
+//interface oritation
 - (AVCaptureVideoOrientation)avOrientationForDeviceOrientation:
-    (UIDeviceOrientation)deviceOrientation {
-  AVCaptureVideoOrientation result =
-      (AVCaptureVideoOrientation)(deviceOrientation);
-  if (deviceOrientation == UIDeviceOrientationLandscapeLeft)
-    result = AVCaptureVideoOrientationLandscapeRight;
-  else if (deviceOrientation == UIDeviceOrientationLandscapeRight)
-    result = AVCaptureVideoOrientationLandscapeLeft;
-  return result;
+(UIDeviceOrientation)deviceOrientation {
+    AVCaptureVideoOrientation result =
+    (AVCaptureVideoOrientation)(deviceOrientation);
+    if (deviceOrientation == UIDeviceOrientationLandscapeLeft)
+        result = AVCaptureVideoOrientationLandscapeRight;
+    else if (deviceOrientation == UIDeviceOrientationLandscapeRight)
+        result = AVCaptureVideoOrientationLandscapeLeft;
+    return result;
 }
 
 - (IBAction)takePicture:(id)sender {
@@ -419,10 +439,15 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
   [super viewDidDisappear:animated];
 }
 
+//- (BOOL)shouldAutorotateToInterfaceOrientation:
+//    (UIInterfaceOrientation)interfaceOrientation {
+//  return (interfaceOrientation == UIInterfaceOrientationPortrait);
+//}
 - (BOOL)shouldAutorotateToInterfaceOrientation:
     (UIInterfaceOrientation)interfaceOrientation {
-  return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait|| interfaceOrientation == UIInterfaceOrientationLandscapeRight|| interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
 }
+
 
 - (BOOL)prefersStatusBarHidden {
   return YES;

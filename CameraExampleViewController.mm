@@ -421,7 +421,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:
     (UIInterfaceOrientation)interfaceOrientation {
-  return (interfaceOrientation == UIInterfaceOrientationPortrait);
+  return (interfaceOrientation == UIInterfaceOrientationPortrait|| interfaceOrientation == UIInterfaceOrientationLandscapeRight|| interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
 }
 
 - (BOOL)prefersStatusBarHidden {

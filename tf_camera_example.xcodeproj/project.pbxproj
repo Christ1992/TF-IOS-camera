@@ -21,6 +21,8 @@
 		1CDB2D4E1ED3AA35007929E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CDB2D4D1ED3AA35007929E9 /* Info.plist */; };
 		54DC6C3C5F734F3A58069F0C /* libPods-tf_camera_example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA8BF92C84895BFE59D8236 /* libPods-tf_camera_example.a */; };
 		AF7A2C4E1F47A1C300FB2D77 /* TestViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF7A2C4D1F47A1C300FB2D77 /* TestViewController.mm */; };
+		AF7A2C511F47A25D00FB2D77 /* eight_calculaiton_graph.pb in Resources */ = {isa = PBXBuildFile; fileRef = AF7A2C4F1F47A25D00FB2D77 /* eight_calculaiton_graph.pb */; };
+		AF7A2C541F47A2D700FB2D77 /* kid_new_label_map.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF7A2C531F47A2D700FB2D77 /* kid_new_label_map.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		59A3CFF71CF4E68100C4259F /* imagenet_comp_graph_label_strings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = imagenet_comp_graph_label_strings.txt; sourceTree = "<group>"; };
 		59A3CFF91CF4E68100C4259F /* tensorflow_inception_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = tensorflow_inception_graph.pb; sourceTree = "<group>"; };
 		AF7A2C4D1F47A1C300FB2D77 /* TestViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestViewController.mm; sourceTree = "<group>"; };
+		AF7A2C4F1F47A25D00FB2D77 /* eight_calculaiton_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = eight_calculaiton_graph.pb; sourceTree = "<group>"; };
+		AF7A2C531F47A2D700FB2D77 /* kid_new_label_map.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kid_new_label_map.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				59A3CFF51CF4E68100C4259F /* grace_hopper.jpg */,
 				59A3CFF71CF4E68100C4259F /* imagenet_comp_graph_label_strings.txt */,
 				59A3CFF91CF4E68100C4259F /* tensorflow_inception_graph.pb */,
+				AF7A2C4F1F47A25D00FB2D77 /* eight_calculaiton_graph.pb */,
+				AF7A2C531F47A2D700FB2D77 /* kid_new_label_map.txt */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -190,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C968D171ED3B8F20054F5C3 /* grace_hopper.jpg in Resources */,
+				AF7A2C541F47A2D700FB2D77 /* kid_new_label_map.txt in Resources */,
 				1C968D181ED3B8F20054F5C3 /* imagenet_comp_graph_label_strings.txt in Resources */,
+				AF7A2C511F47A25D00FB2D77 /* eight_calculaiton_graph.pb in Resources */,
 				1C968D191ED3B8F20054F5C3 /* tensorflow_inception_graph.pb in Resources */,
 				1C99111C1ED3B0E600A6BFB9 /* MainStoryboard_iPhone.storyboard in Resources */,
 				1CDB2D4E1ED3AA35007929E9 /* Info.plist in Resources */,
